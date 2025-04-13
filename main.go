@@ -16,7 +16,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("couldn't get terminal size: %v", err)
 	}
-	matrix := matrix{rows: height, cols: width, grid: newGrid(height, width), propagateTo: 1}
+	matrix := matrix{rows: height, cols: width, grid: newGrid(height, width)}
 
 	fmt.Println("entering the matrix")
 

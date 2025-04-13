@@ -12,7 +12,6 @@ type matrix struct {
 	rows        int
 	cols        int
 	grid        [][]rune
-	propagateTo int
 }
 
 var letters = []rune(`ｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜ:."=*+-¦|_ `)
@@ -50,17 +49,11 @@ func (m *matrix) propagateRows() {
 
 	newGrid[0] = randLetterRow
 
-	for i := 1; i < m.propagateTo; i++ {
+	for i := 1; i < len(m.grid); i++ {
 		newGrid[i] = m.grid[i-1]
 	}
 
 	m.grid = newGrid
-
-	if m.propagateTo == len(m.grid) {
-		m.propagateTo = 1
-	} else {
-		m.propagateTo++
-	}
 }
 
 func (m *matrix) printMatrix() {
