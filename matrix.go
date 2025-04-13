@@ -14,7 +14,7 @@ type matrix struct {
 	grid        [][]rune
 }
 
-var letters = []rune(`ｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜ:."=*+-¦|_ `)
+var letters = []rune(`ｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜ:."=*+-¦|_`)
 
 func newGrid(rows, cols int) [][]rune {
 	grid := [][]rune{}
